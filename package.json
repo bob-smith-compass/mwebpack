@@ -1,0 +1,16 @@
+{
+  "name": "remove",
+  "version": "1.0.0",
+  "description": "`webpack --mode=development ./index.js` This will put the bundle in dist/main.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "knockout": "^3.4.2"
+  }
+}
