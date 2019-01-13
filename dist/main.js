@@ -93,7 +93,18 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [\n    __webpack_require__,\n    __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"),\n    // './node_modules/knockout/build/output/knockout-latest'\n    __webpack_require__(/*! knockout */ \"./node_modules/knockout/build/output/knockout-latest.debug.js\")\n], __WEBPACK_AMD_DEFINE_RESULT__ = (function(require, $, ko) {\n    'use strict';\n    console.log('Webpack working!');\n    console.log($);\n    $('<h3>jQuery Webpack working!</h3>').appendTo('body');\n    $( \"<p>jQuery Webpack working!</p>\" ).appendTo( \".inner\" );\n\n    var viewModel = function(){\n        this.fname = ko.observable('David');\n        this.comments = ko.observable('Knockout Webpack working!');\n        \n    }\n    console.log(ko);\n    // ko.applyBindigns(new viewModel()); // This will be a subtle spelling error to catch\n    ko.applyBindings(new viewModel());\n    \n}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\n//# sourceURL=webpack:///./index.js?");
+eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;!(__WEBPACK_AMD_DEFINE_ARRAY__ = [\n    __webpack_require__,\n    __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\"),\n    // './node_modules/knockout/build/output/knockout-latest'\n    __webpack_require__(/*! knockout */ \"./node_modules/knockout/build/output/knockout-latest.debug.js\"),\n    __webpack_require__(/*! ./ko_amd.js */ \"./ko_amd.js\")\n], __WEBPACK_AMD_DEFINE_RESULT__ = (function(require, $, ko, koamd) {\n    'use strict';\n    console.log('Webpack working!');\n    // console.log($);\n    $('<h3>jQuery Webpack working!</h3>').appendTo('body');\n    $( \"<p>jQuery Webpack working!</p>\" ).appendTo( \".inner\" );\n\n    \n}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\n//# sourceURL=webpack:///./index.js?");
+
+/***/ }),
+
+/***/ "./ko_amd.js":
+/*!*******************!*\
+  !*** ./ko_amd.js ***!
+  \*******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;\n!(__WEBPACK_AMD_DEFINE_ARRAY__ = [\n    __webpack_require__,\n    __webpack_require__(/*! knockout */ \"./node_modules/knockout/build/output/knockout-latest.debug.js\")\n], __WEBPACK_AMD_DEFINE_RESULT__ = (function(require, ko) {\n    'use strict';\n\n    var viewModel = function(){\n        this.fname = ko.observable('David');\n        this.comments = ko.observable('Knockout Webpack working!');\n        \n    }\n    // console.log(ko);\n    // ko.applyBindigns(new viewModel()); // This will be a subtle spelling error to catch\n    ko.applyBindings(new viewModel());\n\n    \n}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),\n\t\t\t\t__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));\n\n//# sourceURL=webpack:///./ko_amd.js?");
 
 /***/ }),
 

@@ -4,7 +4,7 @@
   "description": "`webpack --mode=development ./index.js` This will put the bundle in dist/main.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack -w --mode=development ./index.js"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,9 @@
   "dependencies": {
     "jquery": "^3.3.1",
     "knockout": "^3.4.2"
+  },
+  "devDependencies": {
+    "karma": "^3.1.4",
+    "karma-webpack": "^3.0.5"
   }
 }
