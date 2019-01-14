@@ -8,14 +8,17 @@ define([
 ], function(require, ko, $) {
     'use strict';
 
-    var viewModel = function(){
+    var viewModel = function($){
         this.fname = ko.observable('David');
         this.comments = ko.observable('Knockout Webpack working!');
+        this.show = function(){
+            $('textarea').css({border: 'solic 1px red'});
+        }
         
     }
     // console.log(ko);
     // ko.applyBindigns(new viewModel()); // This will be a subtle spelling error to catch
-    ko.applyBindings(new viewModel());
+    ko.applyBindings(new viewModel($));
 
 });
 
