@@ -4,18 +4,25 @@
   "description": "`webpack --mode=development ./index.js` This will put the bundle in dist/main.js",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w --mode=development ./index.js"
+    "start": "webpack -w --mode=development ./index.js",
+    "test": "babel-node run.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "jasmine": "^3.3.1",
     "jquery": "^3.3.1",
     "knockout": "^3.4.2",
-    "moment": "^2.23.0"
+    "moment": "^2.23.0",
+    "requirejs": "^2.3.6"
   },
   "devDependencies": {
     "karma": "^3.1.4",
-    "karma-webpack": "^3.0.5"
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^3.0.5",
+    "webpack": "^4.28.4"
   }
 }

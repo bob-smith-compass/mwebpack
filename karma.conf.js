@@ -3,8 +3,8 @@ module.exports = (config) => {
       // ... normal karma configuration
       files: [
         // all files ending in "_test"
-        { pattern: 'test/*_test.js', watched: false },
-        { pattern: 'test/**/*_test.js', watched: false }
+        { pattern: 'test/*Spec.js', watched: false },
+        { pattern: 'test/**/*Spec.js', watched: false }
         // each file acts as entry point for the webpack configuration
       ],
   
@@ -13,6 +13,13 @@ module.exports = (config) => {
         'test/*_test.js': [ 'webpack' ],
         'test/**/*_test.js': [ 'webpack' ]
       },
+      plugins: [
+        'karma-chrome-launcher',
+        // 'karma-tap',
+        // 'karma-sourcemap-loader',
+        'karma-webpack' // *** This 'registers' the Karma webpack plugin.
+      ],
+      
   
       webpack: {
         // karma watches the test entry points
@@ -29,4 +36,4 @@ module.exports = (config) => {
       }
     })
   }
-  
+    
