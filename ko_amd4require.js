@@ -12,6 +12,15 @@ define([
     console.log($); // undefined
 
     var viewModel = function(){
+        /**
+         * Initialize events
+         */
+        $(function(){
+            $('textarea').click(function(event){
+                event.stopPropagation();
+                console.log('Text area clicked!');
+            }); 
+        })
         var that=this;
         this.fname = ko.observable('David');
         this.comments = ko.observable('Knockout Webpack working!');
