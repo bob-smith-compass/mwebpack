@@ -2,9 +2,10 @@
 define([
     'require',
     // 'knockout' // Will not load properly with RequireJS because actual path is node_modules/knockout/build/output/knockout-latest.js
-    'node_modules/knockout/build/output/knockout-latest.js'
+    'node_modules/knockout/build/output/knockout-latest.js',
+    'node_modules/jquery/dist/jquery.js'
 
-], function(require, ko) {
+], function(require, ko, $) {
     'use strict';
 
     var viewModel = function(){
