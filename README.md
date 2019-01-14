@@ -12,6 +12,7 @@ This will put the bundle in dist/main.js
 [Karma Webpack](https://github.com/webpack-contrib/karma-webpack)
 
 ## Karma to run RequireJS
+`sudo npm i karma-requirejs`
 To get Karma to run with Require.js we need two files:
 
 karma.conf.js — which configures Karma
