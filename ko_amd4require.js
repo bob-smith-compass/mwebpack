@@ -1,7 +1,9 @@
 
 define([
     'require',
-    'knockout' // Will not load properly with RequireJS because actual path is node_modules/knockout/build/output/knockout-latest.js
+    // 'knockout' // Will not load properly with RequireJS because actual path is node_modules/knockout/build/output/knockout-latest.js
+    'node_modules/knockout/build/output/knockout-latest.js'
+
 ], function(require, ko) {
     'use strict';
 
