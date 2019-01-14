@@ -10,16 +10,19 @@ define([
 ], function(require, ko, $) {
     'use strict';
     console.log($); // undefined
-    console.log('jQuery not'); // undefined
 
     var viewModel = function(){
         var that=this;
         this.fname = ko.observable('David');
         this.comments = ko.observable('Knockout Webpack working!');
         this.show = function(){
-            require(['node_modules/jquery/dist/jquery.js'], function(){
-                $('textarea').css({border: 'solic 1px red'}); // Uncaught TypeError: $ is not a function
-            })
+            // console.log($('textarea'));
+            console.log($('h3'));
+            // require(['node_modules/jquery/dist/jquery.js'], function(){
+                $('textarea').css({border: 'solid 1px red'}); // Uncaught TypeError: $ is not a function IF NOT SET IN require-config.js
+                // $('h3').css({border: 'solic 1px red'}); // NOT APPLIED: solic is not soliD
+                $('h3').css({border: 'solid 1px red'}); // NOT APPLIED: solic is not soliD
+            // })
         }
         
         /** DEBUG: pass $ */
