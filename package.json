@@ -14,6 +14,7 @@
     "babel-cli": "^6.26.0",
     "jasmine": "^3.3.1",
     "jquery": "^3.3.1",
+    "karma-jasmine": "^2.0.1",
     "knockout": "^3.4.2",
     "moment": "^2.23.0",
     "requirejs": "^2.3.6"

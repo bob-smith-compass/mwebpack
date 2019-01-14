@@ -9,6 +9,8 @@ module.exports = (config) => {
         colors: true,
         autoWatch: true,
         browsers: ['Chrome'],
+        frameworks: ['jasmine'],
+
 
     
 
@@ -34,6 +36,7 @@ module.exports = (config) => {
         plugins: [
             'karma-chrome-launcher',
             // 'karma-tap',
+            'karma-jasmine',
             // 'karma-sourcemap-loader',
             'karma-webpack' // *** This 'registers' the Karma webpack plugin.
         ],
