@@ -17,7 +17,9 @@
 describe('jq_amd', function(){
     describe('add function', function(){
         it('has been called', function(){
-            expect(add).toHaveBeenCalled();
+            require(['jq_amd'], function(jqamd){
+                expect(add).toHaveBeenCalled();
+            })
         })
     })
 })
