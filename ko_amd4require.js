@@ -7,13 +7,25 @@ define([
 
 ], function(require, ko, $) {
     'use strict';
+    console.log($); // undefined
+    console.log('jQuery not'); // undefined
 
     var viewModel = function($){
+        var that=this;
         this.fname = ko.observable('David');
         this.comments = ko.observable('Knockout Webpack working!');
         this.show = function(){
-            $('textarea').css({border: 'solic 1px red'});
+            require(['node_modules/jquery/dist/jquery.js'], function(){
+                $('textarea').css({border: 'solic 1px red'});
+            })
         }
+        
+        /** DEBUG: pass $ */
+        require(['node_modules/jquery/dist/jquery.js'], function($){
+            that.mow = function(){
+            $('textarea').css({border: 'solic 5px green'});
+            }
+        })
         
     }
     // console.log(ko);

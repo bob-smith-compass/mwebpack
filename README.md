@@ -18,6 +18,10 @@ karma.conf.js — which configures Karma
 test-main.js — which configures Require.js for the tests
 [http://karma-runner.github.io/0.12/plus/requirejs.html](http://karma-runner.github.io/0.12/plus/requirejs.html)
 
+# Jasmine
+`jasmine init`
+`jasmine examples` // Install Jasmine Test Runner and Examples
+
 ## Jasmine with Webpack Karma
 `sudo npm i karma-jasmine `
 `sudo npm i jasmine`
