@@ -9,6 +9,7 @@ module.exports = (config) => {
         colors: true,
         autoWatch: true,
         browsers: ['Chrome'],
+        // frameworks: ['jasmine', 'requirejs'],
         frameworks: ['jasmine'],
         // enable / disable colors in the output (reporters and logs)
         colors: true,
@@ -27,6 +28,8 @@ module.exports = (config) => {
 
 
         files: [
+            'node_modules/requirejs/require.js',
+
             // all files ending in "_test"
             { pattern: 'test/*Spec.js', watched: false },
             { pattern: 'test/**/*Spec.js', watched: false }

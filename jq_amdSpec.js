@@ -14,27 +14,31 @@
 
 // })
 
-define([
-    'node_modules/requirejs/require'], 
-    function (require) {
+// define([
+//     'node_modules/requirejs/require',
+//     'node_modules/jasmine/bin/jasmine.js'    
+// ], 
+//     function (require, jasmine) {
 
-    describe('jq_amd', function () {
-        describe('add function', function () {
-            it('has been called', function (done) {
-                define(['jq_amd'], [], function (jqamd) {
-                    return {
-                        add: function () { }
-                    }
-                })
-                require(['jq_amd'], function (jqamd) {
-                    spyOn(jqamd, "add");
-                    // jqamd.add(); // Call the function you spy on
-                    expect(jqamd.add).toHaveBeenCalled();
-                    done();
+    
 
-                })
+// })
+
+describe('jq_amd', function () {
+    describe('add function', function () {
+        it('has been called', function (done) {
+            define(['jq_amd'], [], function (jqamd) {
+                return {
+                    add: function () { }
+                }
+            })
+            require(['jq_amd'], function (jqamd) {
+                spyOn(jqamd, "add");
+                // jqamd.add(); // Call the function you spy on
+                expect(jqamd.add).toHaveBeenCalled();
+                done();
+
             })
         })
     })
-
 })
