@@ -2,15 +2,17 @@
 define([
     'require',
     // 'knockout' // Will not load properly with RequireJS because actual path is node_modules/knockout/build/output/knockout-latest.js
-    'node_modules/knockout/build/output/knockout-latest.js',
-    'node_modules/jquery/dist/jquery.js'
+    // 'node_modules/knockout/build/output/knockout-latest.js',
+    // './node_modules/jquery/dist/jquery.js'
+    'knockout',
+    'jquery'
 
 ], function(require, ko, $) {
     'use strict';
     console.log($); // undefined
     console.log('jQuery not'); // undefined
 
-    var viewModel = function($){
+    var viewModel = function(){
         var that=this;
         this.fname = ko.observable('David');
         this.comments = ko.observable('Knockout Webpack working!');
@@ -30,7 +32,7 @@ define([
     }
     // console.log(ko);
     // ko.applyBindigns(new viewModel()); // This will be a subtle spelling error to catch
-    ko.applyBindings(new viewModel($));
+    ko.applyBindings(new viewModel());
 
 });
 
@@ -54,3 +56,5 @@ define([
 //         dateBinding: ko.bindingHandlers.date
 //     };
 // });
+
+
