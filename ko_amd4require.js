@@ -7,48 +7,52 @@ define([
     'knockout',
     'jquery'
 
-], function(require, ko, $) {
+], function (require, ko, $) {
     'use strict';
     console.log($); // undefined
+    var template = '<div>Template: <input type="text" data-bind="value: fname"></div>';
 
-    var viewModel = function(){
+    var viewModel = function () {
         /**
          * Initialize events
          */
-        $(function(){
-            $('textarea').click(function(event){
+        $(function () {
+            $('textarea').click(function (event) {
                 event.stopPropagation();
                 console.log('Text area clicked!');
-            }); 
+            });
         })
-        var that=this;
+        var that = this;
         this.fname = ko.observable('David');
         this.comments = ko.observable('Knockout Webpack working!');
         this.borderSet = ko.observable(false);
-        this.show = function(){
-            if(!this.borderSet()){
-                $('textarea').css({border: 'solid 1px red'}); 
-                $('h3').css({border: 'solid 1px red'}); 
-                this.borderSet(true)
-            }else{
-            // console.log($('textarea'));
-            console.log($('h3'));
-            // require(['node_modules/jquery/dist/jquery.js'], function(){
-                $('textarea').css({border: 'solid 2px green'}); // Uncaught TypeError: $ is not a function IF NOT SET IN require-config.js
+        this.show = function () {
+            if (!this.borderSet()) {
+                $('textarea').css({ border: 'solid 1px red' });
+                $('h3').css({ border: 'solid 1px red' });
+                this.borderSet(true);
+                $('.inner').empty().append(template);
+                alert('Activate knockout since changed externallu');
+            } else {
+                $('.inner').empty();
+                // console.log($('textarea'));
+                console.log($('h3'));
+                // require(['node_modules/jquery/dist/jquery.js'], function(){
+                $('textarea').css({ border: 'solid 2px green' }); // Uncaught TypeError: $ is not a function IF NOT SET IN require-config.js
                 // $('h3').css({border: 'solic 1px red'}); // NOT APPLIED: solic is not soliD
-                $('h3').css({border: 'solid 2px green'}); // NOT APPLIED: solic is not soliD
-            // })
-            this.borderSet(false);
+                $('h3').css({ border: 'solid 2px green' }); // NOT APPLIED: solic is not soliD
+                // })
+                this.borderSet(false);
             }
         }
-        
+
         /** DEBUG: pass $ */
-        require(['node_modules/jquery/dist/jquery.js'], function($){
-            that.mow = function(){
-            $('textarea').css({border: 'solic 5px green'});
+        require(['node_modules/jquery/dist/jquery.js'], function ($) {
+            that.mow = function () {
+                $('textarea').css({ border: 'solic 5px green' });
             }
         })
-        
+
     }
     // console.log(ko);
     // ko.applyBindigns(new viewModel()); // This will be a subtle spelling error to catch
