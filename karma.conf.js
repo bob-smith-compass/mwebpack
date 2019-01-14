@@ -10,9 +10,14 @@ module.exports = (config) => {
         autoWatch: true,
         browsers: ['Chrome'],
         frameworks: ['jasmine'],
+        // enable / disable colors in the output (reporters and logs)
+        colors: true,
+        // enable / disable watching file and executing tests whenever any file changes
+        autoWatch: true,
 
 
-    
+
+
 
 
         // frameworks to use
