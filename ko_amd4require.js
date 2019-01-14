@@ -16,7 +16,7 @@ define([
         this.comments = ko.observable('Knockout Webpack working!');
         this.show = function(){
             require(['node_modules/jquery/dist/jquery.js'], function(){
-                $('textarea').css({border: 'solic 1px red'});
+                $('textarea').css({border: 'solic 1px red'}); // Uncaught TypeError: $ is not a function
             })
         }
         
